@@ -1,7 +1,7 @@
 {
-  "name": "learnstorybook-design-system-template",
+  "name": "@antman999/meridian-design-systems",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
@@ -83,5 +83,8 @@
     }
   },
   "readme": "ERROR: No README data found!",
-  "_id": "learnstorybook-design-system-template@0.1.0"
+  "_id": "learnstorybook-design-system-template@0.1.0",
+  "description": "UI components",
+  "repository": "git@github.com:antman999/meridian-design-systems.git",
+  "author": "antman999 <anthonymendoza9922@gmail.com>"
 }
