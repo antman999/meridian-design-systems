@@ -13,6 +13,21 @@
 
 ---
 
+# v0.1.3 (Fri Jul 21 2023)
+
+#### ⚠️ Pushed to `main`
+
+- start of first publish ([@antman999](https://github.com/antman999))
+- chromatic setup ([@antman999](https://github.com/antman999))
+- initial setup ([@antman999](https://github.com/antman999))
+- first commit ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.2 (Fri Jul 21 2023)
 
 #### ⚠️ Pushed to `main`
