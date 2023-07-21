@@ -82,7 +82,7 @@
       "optional": true
     }
   },
-  "readme": "ERROR: No README data found!",
+  "readme": "Empty",
   "description": "UI components",
   "repository": "git@github.com:antman999/meridian-design-systems.git",
   "author": "antman999 <anthonymendoza9922@gmail.com>"
