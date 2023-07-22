@@ -1,3 +1,16 @@
+# v0.1.11 (Sat Jul 22 2023)
+
+#### ⚠️ Pushed to `main`
+
+- added push action back ([@antman999](https://github.com/antman999))
+- added npm registry ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.10 (Sat Jul 22 2023)
 
 #### ⚠️ Pushed to `main`
