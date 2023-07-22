@@ -10,7 +10,10 @@
 
 dist
 .env
-/.nyc_output/
+.nyc_output/
+
+# Ignore coverage.json file
+coverage.json
 
 # production
 /build
