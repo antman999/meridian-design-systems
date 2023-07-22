@@ -84,6 +84,7 @@
   },
   "readme": "Empty",
   "description": "UI components",
+  "website": "https://meridian-design-systems.vercel.app/?path=/docs/design-system-introduction--docs",
   "repository": "git@github.com:antman999/meridian-design-systems.git",
   "author": "antman999 <anthonymendoza9922@gmail.com>"
 }
