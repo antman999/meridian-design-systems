@@ -1,3 +1,22 @@
+# v0.1.10 (Sat Jul 22 2023)
+
+#### ⚠️ Pushed to `main`
+
+- fixing npm publish (anthonymendoza9922@gmail.com)
+- vercel is working, add npm website (anthonymendoza9922@gmail.com)
+- publish (anthonymendoza9922@gmail.com)
+- Update .gitignore (anthonymendoza9922@gmail.com)
+- start of first publish (anthonymendoza9922@gmail.com)
+- chromatic setup (anthonymendoza9922@gmail.com)
+- initial setup (anthonymendoza9922@gmail.com)
+- first commit (anthonymendoza9922@gmail.com)
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.9 (Sat Jul 22 2023)
 
 #### ⚠️ Pushed to `main`
