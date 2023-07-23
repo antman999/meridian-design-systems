@@ -34,15 +34,14 @@ const SIZES = {
 
 const StyledButton = styled.button`
   border: 0;
-  border-radius: 3em;
+  border-radius: 0.4em;
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
   padding: ${(props) =>
-    props.size === SIZES.SMALL ? '8px 16px' : '13px 20px'};
+    props.size === SIZES.SMALL ? '8px 16px' : '12px 22px'};
   position: relative;
   text-align: center;
-  text-decoration: none;
   transition: all 150ms ease-out;
   transform: translate3d(0, 0, 0);
   vertical-align: top;
@@ -82,6 +81,8 @@ const StyledButton = styled.button`
     transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
     transition: transform 700ms ${easing.rubber};
     opacity: 1;
+    text-decoration: ${(props) =>
+      props.appearance === APPEARANCES.TERTIARY ? 'underline' : 'none'};
   }
 
   ${Loading} {
@@ -205,23 +206,24 @@ const StyledButton = styled.button`
   ${(props) =>
     props.appearance === APPEARANCES.TERTIARY &&
     `
-      background: ${color.tertiary};
-      color: ${color.darkest};
+      background: none;
+      text-decoration: underline;
+      color: ${color.primary};
 
       ${
         !props.isLoading &&
         `
           &:hover {
-            background: ${darken(0.05, color.tertiary)};
+            box-shadow: none;
           }
           &:active {
-            box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 3em inset;
+            box-shadow: none;
           }
           &:focus {
-            box-shadow: ${rgba(color.tertiary, 0.4)} 0 1px 9px 2px;
+            box-shadow: none;
           }
           &:focus:hover {
-            box-shadow: ${rgba(color.tertiary, 0.2)} 0 8px 18px 0px;
+            box-shadow: none;
           }
         `
       }

@@ -2,17 +2,17 @@ import { css } from '@emotion/react';
 
 // Global style variables
 export const background = {
-  app: '#F6F9FC',
-  appInverse: '#7A8997',
-  positive: '#E1FFD4',
-  negative: '#FEDED2',
-  warning: '#FFF5CF',
+  app: '#f8f9fa',
+  appInverse: '#212529',
+  positive: '#48b89f',
+  negative: '#ba181b',
+  warning: '#deb714',
 };
 
 export const color = {
   // Palette
-  primary: '#FF4785', // coral
-  secondary: '#1EA7FD', // ocean
+  primary: '#AB51E3',
+  secondary: '#1489eb',
   tertiary: '#DDDDDD',
 
   orange: '#FC521F',
@@ -23,22 +23,22 @@ export const color = {
   ultraviolet: '#2A0481',
 
   // Monochrome
-  lightest: '#FFFFFF',
+  lightest: '#f8f9fa',
   lighter: '#F8F8F8',
   light: '#F3F3F3',
-  mediumlight: '#EEEEEE',
-  medium: '#DDDDDD',
-  mediumdark: '#999999',
-  dark: '#666666',
+  mediumlight: '#dee2e6',
+  medium: '#adb5bd',
+  mediumdark: '#495057',
+  dark: '#343a40',
   darker: '#444444',
-  darkest: '#333333',
+  darkest: '#212529',
 
   border: 'rgba(0,0,0,.1)',
 
   // Status
-  positive: '#66BF3C',
-  negative: '#FF4400',
-  warning: '#E69D00',
+  positive: '#57CC99',
+  negative: '#e5383b',
+  warning: '#FDC500',
 };
 
 export const spacing = {
