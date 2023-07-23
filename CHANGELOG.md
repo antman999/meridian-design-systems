@@ -1,3 +1,15 @@
+# v0.1.15 (Sun Jul 23 2023)
+
+#### 🐛 Bug Fix
+
+- changed tokens and button from default [#2](https://github.com/antman999/meridian-design-systems/pull/2) ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.11 (Sat Jul 22 2023)
 
 #### ⚠️ Pushed to `main`
