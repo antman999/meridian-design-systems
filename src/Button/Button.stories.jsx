@@ -10,6 +10,59 @@ export default {
   component: Button,
 };
 
+export const Primary = {
+  args: {
+    appearance: 'primary',
+    children: 'Button',
+  },
+};
+
+/**
+ * All supported appearances.
+ */
+export const Appearances = {
+  args: {
+    children: 'Button',
+  },
+  render: (args) => (
+    <>
+      <Button {...args} appearance='primary' />
+      <Button {...args} appearance='secondary' />
+      <Button {...args} appearance='tertiary' />
+      <Button {...args} appearance='primaryOutline' />
+      <Button {...args} appearance='secondaryOutline' />
+      <Button appearance='primary' isDisabled>
+        Disabled
+      </Button>
+    </>
+  ),
+};
+
+/**
+ * If `containsIcon` is set to true it will round out the button for the Icon,
+ * This should be set to `true` if the `children` prop will be an icon.
+ *
+ * **Note:** You can adjust the button size to either small or default.
+ */
+export const Icons = {
+  render: () => (
+    <>
+      <Button appearance='primary' size='small' containsIcon>
+        <Icon icon='mobile' aria-label='Link' />
+      </Button>
+      <Button appearance='secondary' size='small' containsIcon>
+        <Icon icon='google' aria-label='Link' />
+      </Button>
+      <Button appearance='outline' size='small' containsIcon>
+        <Icon icon='link' aria-label='Link' />
+      </Button>
+      <Button appearance='outline' containsIcon>
+        <Icon icon='link' aria-label='Link' />
+      </Button>
+    </>
+  ),
+};
+
 export const AllButtons = {
   name: 'all buttons',
   render: () => (
@@ -238,12 +291,34 @@ export const WithInteractions = {
     children: 'Button',
   },
   play: async ({ canvasElement }) => {
-    // Assigns canvas to the component root element
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByRole('link'));
     expect(canvas.getByRole('link')).toHaveAttribute(
       'href',
       'http://storybook.js.org',
+    );
+  },
+};
+
+/**
+ * Indicates if the button is clickable at the current state.
+ */
+export const Disabled = {
+  args: {
+    appearance: 'primary',
+    href: 'http://storybook.js.org',
+    disabled: true,
+    ButtonWrapper: StoryLinkWrapper,
+    children: 'Button',
+  },
+
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('link'));
+    expect(canvas.getByRole('link')).toHaveAttribute(
+      'href',
+      'http://storybook.js.org',
+      'disabled',
     );
   },
 };
