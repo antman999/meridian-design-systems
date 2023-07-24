@@ -34,12 +34,12 @@ const SIZES = {
 
 const StyledButton = styled.button`
   border: 0;
-  border-radius: 0.4em;
+  border-radius: 0.5em;
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
   padding: ${(props) =>
-    props.size === SIZES.SMALL ? '8px 16px' : '12px 22px'};
+    props.size === SIZES.SMALL ? '8px 14px' : '12px 22px'};
   position: relative;
   text-align: center;
   transition: all 150ms ease-out;
@@ -150,7 +150,9 @@ const StyledButton = styled.button`
         display: block;
         margin: 0;
       }
-      padding: ${props.size === SIZES.SMALL ? '7' : '12'}px;
+      padding: ${props.size === SIZES.SMALL ? '8' : '12'}px;
+      border-radius: 3em;
+      margin: 0 2px;
     `}
 
   ${(props) =>
@@ -389,6 +391,9 @@ Button.propTypes = {
    * Buttons that have hrefs should use <a> instead of <button>
    */
   isLink: PropTypes.bool,
+  /**
+   * Text required for the button.
+   */
   children: PropTypes.node.isRequired,
   appearance: PropTypes.oneOf(Object.values(APPEARANCES)),
   isDisabled: PropTypes.bool,

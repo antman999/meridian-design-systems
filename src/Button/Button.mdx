@@ -1,0 +1,63 @@
+import {
+  Canvas,
+  Controls,
+  ArgTypes,
+  Description,
+  Meta,
+  Subtitle,
+  Story,
+} from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories';
+
+# Button
+
+<Meta of={ButtonStories} />
+
+<Subtitle>Provides the user a simple way to trigger an event.</Subtitle>
+
+Use buttons for indicating where and what a user should click and the behavior that follows.
+
+The Button should always contain a `children` to indicate the purpose of the button.
+
+<Canvas>
+  <Story of={ButtonStories.Primary} />
+</Canvas>
+
+<ArgTypes of={ButtonStories} />
+
+## Button Usage
+
+The button component is a versatile UI element designed for user interactions.
+It serves as a clickable element to trigger actions, such as submitting a form,
+navigating to a different page, or executing specific functions
+
+## Additional variants
+
+### Appearances
+
+<Description of={ButtonStories.Appearances} />
+
+<Story of={ButtonStories.Appearances} />
+
+### Disabled
+
+<Description of={ButtonStories.Disabled} />
+
+<Story of={ButtonStories.Disabled} />
+
+### ContainsIcon
+
+<Description of={ButtonStories.Icons} />
+
+<Story of={ButtonStories.Icons} />
+
+### Playground
+
+Interact with the component and see how it responds to the different input properties.
+
+<Canvas>
+  <Story of={ButtonStories.WithInteractions} />
+</Canvas>
+
+<Controls of={ButtonStories.WithInteractions} />

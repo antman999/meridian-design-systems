@@ -11,7 +11,7 @@ export const background = {
 
 export const color = {
   // Palette
-  primary: '#AB51E3',
+  primary: '#A93AF2',
   secondary: '#1489eb',
   tertiary: '#DDDDDD',
 
@@ -23,7 +23,7 @@ export const color = {
   ultraviolet: '#2A0481',
 
   // Monochrome
-  lightest: '#f8f9fa',
+  lightest: '#FFFFFF',
   lighter: '#F8F8F8',
   light: '#F3F3F3',
   mediumlight: '#dee2e6',
