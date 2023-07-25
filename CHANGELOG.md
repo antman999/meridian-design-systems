@@ -1,3 +1,15 @@
+# v0.1.19 (Tue Jul 25 2023)
+
+#### ⚠️ Pushed to `main`
+
+- moved assets to public due to vite build ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.18 (Tue Jul 25 2023)
 
 #### ⚠️ Pushed to `main`
