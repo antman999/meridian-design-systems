@@ -12,7 +12,7 @@ Welcome to Meridian Design Systems, an open-source library aimed at streamlining
 
 **Responsive and Accessible:** Ensuring inclusivity with designs that reach all users, regardless of their devices or abilities. There are A11Y tests to all components ensuring each version of the library is always up to industry standards.
 
-**Evolving with the Industry:** Meridian constantly evolves with the latest trends and practices, providing regular updates.
+**Evolving with the Industry:** One of the biggest focuses of the project is to evolve with the latest trends and practices, providing regular updates and hopefully with stakeholder support down the road.
 
 **Regression Testing:** Each Pull request compares the previous design against the PR to ensure no UI regressions get shipped.
 
