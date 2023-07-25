@@ -48,7 +48,7 @@ const List = styled.ul`
 `;
 
 export default {
-  title: 'Design System/Icon',
+  title: 'Data Display/Icon',
   component: Icon,
 };
 
