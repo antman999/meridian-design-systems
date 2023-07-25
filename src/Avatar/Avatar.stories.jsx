@@ -1,7 +1,7 @@
 import { Avatar } from './Avatar';
 
 export default {
-  title: 'Design System/Avatar',
+  title: 'Data Display/Avatar',
   component: Avatar,
   parameters: {
     componentSubtitle:
