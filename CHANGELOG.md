@@ -1,3 +1,15 @@
+# v0.1.17 (Tue Jul 25 2023)
+
+#### 🐛 Bug Fix
+
+- 6 update component file structure and storybook logo [#7](https://github.com/antman999/meridian-design-systems/pull/7) ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.16 (Mon Jul 24 2023)
 
 #### 🐛 Bug Fix
