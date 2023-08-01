@@ -1,3 +1,15 @@
+# v0.1.20 (Tue Aug 01 2023)
+
+#### 🐛 Bug Fix
+
+- 4 navigation header implementation [#8](https://github.com/antman999/meridian-design-systems/pull/8) ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.19 (Tue Jul 25 2023)
 
 #### ⚠️ Pushed to `main`
