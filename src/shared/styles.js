@@ -33,6 +33,9 @@ export const color = {
   darker: '#444444',
   darkest: '#212529',
 
+  lightBlur: '#ffffffd4',
+  darkBlur: '#212529e6',
+
   border: 'rgba(0,0,0,.1)',
 
   // Status

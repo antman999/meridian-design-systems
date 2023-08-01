@@ -11,16 +11,18 @@ const StyledAppBar = styled.nav`
   box-sizing: border-box;
   flex-shrink: 0;
   position: fixed;
+  border-bottom: ${(props) =>
+    props.elevateAppBar ? `1px solid ${color.border}` : 'none'};
   ${(props) =>
     props.color === 'light' &&
     `
-    background: ${color.lightest};
+    background: ${color.lightBlur};
     backdrop-filter: blur(8px);
   `};
   ${(props) =>
     props.color === 'dark' &&
     `
-    background: ${color.darkest};
+    background: ${color.darkBlur};
     backdrop-filter: blur(8px);
   `};
   ${(props) =>
@@ -35,22 +37,39 @@ const StyledAppBar = styled.nav`
         position: absolute;
     },
   `};
+  ${(props) =>
+    props.position === 'absolute' &&
+    `
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: auto;
+    right: 0;
+  `};
+  ${(props) =>
+    props.position === 'static' &&
+    `
+    position: static;
+  `};
+  ${(props) =>
+    props.position === 'relative' &&
+    `
+    position: relative;
+  `};
 `;
 
 export const AppBar = forwardRef(function AppBar(
-  {
-    children,
-    position,
-    scrollToTop,
-    elevateAppBar,
-    color,
-    backgroundBlur,
-    ...props
-  },
+  { children, position, scrollToTop, elevateAppBar, color, ...props },
   ref,
 ) {
   return (
-    <StyledAppBar color={color} ref={ref} position={position} {...props}>
+    <StyledAppBar
+      color={color}
+      ref={ref}
+      position={position}
+      elevateAppBar={elevateAppBar}
+      {...props}
+    >
       {children}
     </StyledAppBar>
   );
@@ -89,8 +108,6 @@ AppBar.propTypes = {
     PropTypes.oneOf(['light', 'dark']),
     PropTypes.string,
   ]),
-
-  backgroundBlur: PropTypes.bool,
 };
 
 AppBar.defaultProps = {
@@ -98,5 +115,4 @@ AppBar.defaultProps = {
   scrollToTop: true,
   elevateAppBar: true,
   color: 'light',
-  backgroundBlur: true,
 };
