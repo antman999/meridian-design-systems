@@ -2,37 +2,66 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { background, color, typography } from '../shared/styles';
+import { forwardRef } from 'react';
 
-export function AppBar({
-  leftControl,
-  rightControl,
-  centerControl,
-  position,
-  scrollToTop,
-  elevateAppBar,
-  color,
-  backgroundBlur,
-  ...props
-}) {
+const StyledAppBar = styled.nav`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: fixed;
+  ${(props) =>
+    props.color === 'light' &&
+    `
+    background: ${color.lightest};
+    backdrop-filter: blur(8px);
+  `};
+  ${(props) =>
+    props.color === 'dark' &&
+    `
+    background: ${color.darkest};
+    backdrop-filter: blur(8px);
+  `};
+  ${(props) =>
+    props.position === 'fixed' &&
+    `
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: auto;
+    right: 0;
+    '@media print': {
+        position: absolute;
+    },
+  `};
+`;
+
+export const AppBar = forwardRef(function AppBar(
+  {
+    children,
+    position,
+    scrollToTop,
+    elevateAppBar,
+    color,
+    backgroundBlur,
+    ...props
+  },
+  ref,
+) {
   return (
-    <div>
-      <div>hi</div>
-    </div>
+    <StyledAppBar color={color} ref={ref} position={position} {...props}>
+      {children}
+    </StyledAppBar>
   );
-}
+});
 
 AppBar.propTypes = {
   /**
    * The left content of the component.
    */
-  leftControl: PropTypes.node,
 
-  /**
-   * An action at the center of the AppBar, this is usually an input or logo
-   */
-  centerControl: PropTypes.node,
-
-  rightControl: PropTypes.node,
+  children: PropTypes.node.isRequired,
 
   position: PropTypes.oneOf([
     'absolute',
