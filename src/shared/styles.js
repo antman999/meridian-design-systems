@@ -12,7 +12,7 @@ export const background = {
 export const color = {
   // Palette
   primary: '#A93AF2',
-  secondary: '#1489eb',
+  secondary: '#2196f3',
   tertiary: '#DDDDDD',
 
   orange: '#FC521F',
@@ -32,6 +32,9 @@ export const color = {
   dark: '#343a40',
   darker: '#444444',
   darkest: '#212529',
+
+  lightBlur: '#ffffffd4',
+  darkBlur: '#212529e6',
 
   border: 'rgba(0,0,0,.1)',
 
