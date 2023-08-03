@@ -1,3 +1,15 @@
+# v0.1.22 (Thu Aug 03 2023)
+
+#### ⚠️ Pushed to `main`
+
+- removed warning addon ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.21 (Thu Aug 03 2023)
 
 #### 🐛 Bug Fix
