@@ -12,7 +12,7 @@ const StyledAppBar = styled.nav`
   flex-shrink: 0;
   position: fixed;
   border-bottom: ${(props) =>
-    props.elevateAppBar ? `1px solid ${color.border}` : 'none'};
+    props.withBottomBorder ? `1px solid ${color.border}` : 'none'};
   ${(props) =>
     props.color === 'light' &&
     `
@@ -25,11 +25,27 @@ const StyledAppBar = styled.nav`
     background: ${color.darkBlur};
     backdrop-filter: blur(8px);
   `};
+
+  ${(props) =>
+    props.color === 'inherit' &&
+    `
+  color: 'inherit';
+  `}
+
+  ${(props) =>
+    props.color &&
+    props.color !== 'light' &&
+    props.color !== 'dark' &&
+    props.color !== 'inherit' &&
+    `
+    background: ${props.color};
+   `}
+
   ${(props) =>
     props.position === 'fixed' &&
     `
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: auto;
     right: 0;
@@ -41,7 +57,7 @@ const StyledAppBar = styled.nav`
     props.position === 'absolute' &&
     `
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: auto;
     right: 0;
@@ -56,10 +72,12 @@ const StyledAppBar = styled.nav`
     `
     position: relative;
   `};
+
+  ${(props) => props.style}
 `;
 
 export const AppBar = forwardRef(function AppBar(
-  { children, position, scrollToTop, elevateAppBar, color, ...props },
+  { children, position, withBottomBorder, color, style, ...props },
   ref,
 ) {
   return (
@@ -67,7 +85,8 @@ export const AppBar = forwardRef(function AppBar(
       color={color}
       ref={ref}
       position={position}
-      elevateAppBar={elevateAppBar}
+      style={style}
+      withBottomBorder={withBottomBorder}
       {...props}
     >
       {children}
@@ -77,9 +96,8 @@ export const AppBar = forwardRef(function AppBar(
 
 AppBar.propTypes = {
   /**
-   * The left content of the component.
+   * The navigation content of the AppBar.
    */
-
   children: PropTypes.node.isRequired,
 
   position: PropTypes.oneOf([
@@ -91,28 +109,31 @@ AppBar.propTypes = {
   ]),
 
   /**
-   * Animates a smooth scroll to the top of the page onClick
+   * Adds a bottom border to the navigation bar.
    */
-  scrollToTop: PropTypes.bool,
+  withBottomBorder: PropTypes.bool,
 
   /**
-   * Adds a bottom border shadow as the user begins to scroll
-   */
-  elevateAppBar: PropTypes.bool,
-
-  /**
-   * The color of the component, both light and dark will use the color tokens,
-   * if you wish to provide your own you can, each color will get a blur applied unless `backgroundBlur` is false.
+   * `light` and `dark` will apply color tokens from meridian.
+   *
+   * `inherit` will apply the color used within your app.
+   *
+   * You can also provide your own custom hex code value.
    */
   color: PropTypes.oneOfType([
-    PropTypes.oneOf(['light', 'dark']),
+    PropTypes.oneOf(['light', 'dark', 'inherit']),
     PropTypes.string,
   ]),
+
+  /**
+   * Override or provide custom styles using the `style` prop,
+   */
+  style: PropTypes.object,
 };
 
 AppBar.defaultProps = {
   position: 'fixed',
-  scrollToTop: true,
-  elevateAppBar: true,
+  withBottomBorder: true,
   color: 'light',
+  style: {},
 };

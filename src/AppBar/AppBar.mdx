@@ -1,0 +1,120 @@
+import {
+  Canvas,
+  Controls,
+  ArgTypes,
+  Description,
+  Meta,
+  Subtitle,
+  Story,
+} from '@storybook/blocks';
+
+import * as AppBarStories from './AppBar.stories';
+
+# AppBar
+
+<Meta of={AppBarStories} />
+<Subtitle>
+  provides a navigation bar that contains actions relating to where the user is
+  on the application.
+</Subtitle>
+
+The primary function of the appBar is to display essential actions and options
+that relate to the user's location within the app. It prominently showcases the
+app's title or logo, helping users quickly identify the application they are
+using.
+
+<Canvas
+  of={AppBarStories.Default}
+  story={{
+    inline: false,
+  }}
+/>
+
+<ArgTypes of={AppBarStories} />
+
+# Props
+
+## `color`
+
+<Description of={AppBarStories.Default} />
+
+<Canvas
+  of={AppBarStories.Default}
+  story={{
+    inline: false,
+  }}
+/>
+
+<Description of={AppBarStories.Dark} />
+
+<Canvas
+  of={AppBarStories.Dark}
+  story={{
+    inline: false,
+  }}
+/>
+
+<Description of={AppBarStories.CustomColor} />
+<Canvas
+  of={AppBarStories.CustomColor}
+  story={{
+    inline: false,
+  }}
+/>
+
+## `position`
+
+`position = 'fixed'`
+
+<Canvas
+  of={AppBarStories.Fixed}
+  story={{
+    inline: false,
+    height: '400px',
+    margin: 0,
+  }}
+/>
+
+`position = 'absolute'`
+
+<Canvas
+  of={AppBarStories.Absolute}
+  story={{
+    inline: false,
+    height: '400px',
+    margin: 0,
+  }}
+/>
+
+`position = 'static'`
+
+<Canvas
+  of={AppBarStories.Static}
+  story={{
+    inline: false,
+    height: '400px',
+    margin: 0,
+  }}
+/>
+
+`position = 'sticky'`
+
+<Canvas
+  of={AppBarStories.Sticky}
+  story={{
+    inline: false,
+    height: '400px',
+    margin: 0,
+  }}
+/>
+
+`position = 'relative'`
+
+<Canvas
+  of={AppBarStories.Relative}
+  story={{
+    inline: false,
+    height: '400px',
+    margin: 0,
+  }}
+/>
