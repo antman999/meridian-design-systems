@@ -1,3 +1,15 @@
+# v0.1.21 (Thu Aug 03 2023)
+
+#### 🐛 Bug Fix
+
+- appBar component completed along with documentation [#11](https://github.com/antman999/meridian-design-systems/pull/11) ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.20 (Tue Aug 01 2023)
 
 #### 🐛 Bug Fix
