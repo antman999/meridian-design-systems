@@ -1,28 +1,23 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-
 import { darken } from 'polished';
-
 import { Icon } from '../Icon';
-import { color } from '../shared/styles';
 
 const linkStyles = css`
   display: inline-block;
   transition: transform 150ms ease-out, color 150ms ease-out;
-  text-decoration: none;
-
-  color: ${color.secondary};
-
+  text-decoration: underline;
+  color: ${(props) => props.theme.color.secondary};
   &:hover,
   &:focus {
     cursor: pointer;
     transform: translateY(-1px);
-    color: ${darken(0.07, color.secondary)};
+    color: ${(props) => darken(0.07, props.theme.color.secondary)};
   }
   &:active {
     transform: translateY(0);
-    color: ${darken(0.1, color.secondary)};
+    color: ${(props) => darken(0.01, props.theme.color.secondary)};
   }
 
   svg {
@@ -51,28 +46,28 @@ const linkStyles = css`
   ${(props) =>
     props.secondary &&
     css`
-      color: ${color.mediumdark};
+      color: ${props.theme.color.dark2};
 
       &:hover {
-        color: ${color.dark};
+        color: ${props.theme.color.dark3};
       }
 
       &:active {
-        color: ${color.darker};
+        color: ${props.theme.color.dark4};
       }
     `};
 
   ${(props) =>
     props.tertiary &&
     css`
-      color: ${color.dark};
+      color: ${props.theme.color.dark3};
 
       &:hover {
-        color: ${color.darkest};
+        color: ${props.theme.color.dark5};
       }
 
       &:active {
-        color: ${color.mediumdark};
+        color: ${props.theme.color.dark2};
       }
     `};
 
@@ -80,7 +75,6 @@ const linkStyles = css`
     props.nochrome &&
     css`
       color: inherit;
-
       &:hover,
       &:active {
         color: inherit;
@@ -91,14 +85,13 @@ const linkStyles = css`
   ${(props) =>
     props.inverse &&
     css`
-      color: ${color.lightest};
-
+      color: ${props.theme.color.light1};
       &:hover {
-        color: ${color.lighter};
+        color: ${props.theme.color.light2};
       }
 
       &:active {
-        color: ${color.light};
+        color: ${props.theme.color.light3};
       }
     `};
 

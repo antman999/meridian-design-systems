@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { background, color, typography } from '../shared/styles';
 
 const BadgeWrapper = styled.div`
   display: inline-block;
@@ -9,8 +8,8 @@ const BadgeWrapper = styled.div`
   font-size: 12px;
   line-height: 12px;
   padding: 5px 12px;
-  border-radius: 0.25em;
-  font-weight: ${typography.weight.bold};
+  border-radius: 2em;
+  font-weight: ${(props) => props.theme.typography.weight.bold};
   margin-inline-start: 2px;
   margin-inline-end: 2px;
   svg {
@@ -23,36 +22,36 @@ const BadgeWrapper = styled.div`
   ${(props) =>
     props.status === 'positive' &&
     css`
-      color: ${color.lightest};
-      background: ${background.positive};
+      color: ${props.theme.color.black};
+      background: ${props.theme.color.success};
     `};
 
   ${(props) =>
     props.status === 'negative' &&
     css`
-      color: ${color.lightest};
-      background: ${background.negative};
+      color: ${props.theme.color.white};
+      background: ${props.theme.color.error};
     `};
 
   ${(props) =>
     props.status === 'warning' &&
     css`
-      color: ${color.lightest};
-      background: ${background.warning};
+      color: ${props.theme.color.black};
+      background: ${props.theme.color.warning};
     `};
 
   ${(props) =>
     props.status === 'error' &&
     css`
-      color: ${color.lightest};
-      background: ${color.negative};
+      color: ${props.theme.color.white};
+      background: ${props.theme.color.error};
     `};
 
   ${(props) =>
     props.status === 'neutral' &&
     css`
-      color: ${color.dark};
-      background: ${color.mediumlight};
+      color: ${props.theme.color.light1};
+      background: ${props.theme.color.dark2};
     `};
 `;
 

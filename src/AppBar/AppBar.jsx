@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { background, color, typography } from '../shared/styles';
 import { forwardRef } from 'react';
 
 const StyledAppBar = styled.nav`
@@ -12,30 +11,23 @@ const StyledAppBar = styled.nav`
   flex-shrink: 0;
   position: fixed;
   border-bottom: ${(props) =>
-    props.withBottomBorder ? `1px solid ${color.border}` : 'none'};
+    props.withBottomBorder ? `1px solid ${props.theme.color.border}` : 'none'};
   ${(props) =>
-    props.color === 'light' &&
+    props.color === 'default' &&
     `
-    background: ${color.lightBlur};
-    backdrop-filter: blur(8px);
-  `};
-  ${(props) =>
-    props.color === 'dark' &&
-    `
-    background: ${color.darkBlur};
+    background: ${props.theme.color.appBarBlur};
     backdrop-filter: blur(8px);
   `};
 
   ${(props) =>
     props.color === 'inherit' &&
     `
-  color: 'inherit';
+    color: 'inherit';
   `}
 
   ${(props) =>
     props.color &&
-    props.color !== 'light' &&
-    props.color !== 'dark' &&
+    props.color !== 'default' &&
     props.color !== 'inherit' &&
     `
     background: ${props.color};
@@ -121,7 +113,7 @@ AppBar.propTypes = {
    * You can also provide your own custom hex code value.
    */
   color: PropTypes.oneOfType([
-    PropTypes.oneOf(['light', 'dark', 'inherit']),
+    PropTypes.oneOf(['default', 'inherit']),
     PropTypes.string,
   ]),
 
@@ -134,6 +126,6 @@ AppBar.propTypes = {
 AppBar.defaultProps = {
   position: 'fixed',
   withBottomBorder: true,
-  color: 'light',
+  color: 'default',
   style: {},
 };

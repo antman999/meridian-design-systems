@@ -25,7 +25,13 @@ export const Appearances = {
     children: 'Button',
   },
   render: (args) => (
-    <>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        gap: '8px',
+      }}
+    >
       <Button {...args} appearance='primary' />
       <Button {...args} appearance='secondary' />
       <Button {...args} appearance='tertiary' />
@@ -34,7 +40,7 @@ export const Appearances = {
       <Button appearance='primary' isDisabled>
         Disabled
       </Button>
-    </>
+    </div>
   ),
 };
 
@@ -66,7 +72,14 @@ export const Icons = {
 export const AllButtons = {
   name: 'all buttons',
   render: () => (
-    <>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        gap: '10px',
+        flexWrap: 'wrap',
+      }}
+    >
       <Button appearance='primary'>Primary</Button>
       <Button appearance='secondary'>Secondary</Button>
       <Button appearance='tertiary'>Tertiary</Button>
@@ -115,7 +128,7 @@ export const AllButtons = {
         <Icon icon='link' />
         Link
       </Button>
-    </>
+    </div>
   ),
 };
 
