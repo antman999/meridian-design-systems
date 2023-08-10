@@ -20,7 +20,7 @@
     window.CHANNEL_OPTIONS = {};
     window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false};
     window.STORIES = [{"titlePrefix":"","directory":"./src","files":"Intro.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/Intro\\.mdx)$"},{"titlePrefix":"","directory":"./src","files":"**/*.mdx","importPathMatcher":"^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.mdx)$"},{"titlePrefix":"","directory":"./src","files":"**/*.stories.@(js|jsx|mjs|ts|tsx)","importPathMatcher":"^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|mjs|ts|tsx))$"}];
-    window.DOCS_OPTIONS = {"docsMode":true,"defaultName":"Docs","autodocs":"tag"};
+    window.DOCS_OPTIONS = {"defaultName":"Docs","autodocs":"tag"};
 
     // We do this so that "module && module.hot" etc. in Storybook source code
     // doesn't fail (it will simply be disabled)
@@ -356,8 +356,23 @@
     console.warn('unable to connect to top frame for connecting dev tools');
   }
 </script>
+<style>
+  /* Fix dynamic dark mode */
+  #storybook-docs h1 > a:first-child,
+  #storybook-docs h2 > a:first-child,
+  #storybook-docs h3 > a:first-child,
+  #storybook-docs h4 > a:first-child,
+  #storybook-docs h5 > a:first-child,
+  #storybook-docs h6 > a:first-child {
+    float: left;
+    line-height: inherit;
+    padding-right: 10px;
+    margin-left: -24px;
+    color: inherit;
+  }
+</style>
 
-  <script type="module" crossorigin src="./assets/iframe-0add55a3.js"></script>
+  <script type="module" crossorigin src="./assets/iframe-55f0226c.js"></script>
 </head>
 
 <body>

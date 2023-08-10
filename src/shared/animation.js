@@ -1,6 +1,5 @@
 // Handy CSS animations for micro-interactions
 import { css, keyframes } from '@emotion/react';
-import { color } from './styles';
 
 export const easing = {
   rubber: 'cubic-bezier(0.175, 0.885, 0.335, 1.05)',
@@ -54,7 +53,7 @@ export const shake = keyframes`
 
 export const inlineGlow = css`
   animation: ${glow} 1.5s ease-in-out infinite;
-  background: ${color.mediumlight};
+  background: #dee2e6;
   color: transparent;
   cursor: progress;
 `;

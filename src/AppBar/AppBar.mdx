@@ -13,6 +13,7 @@ import * as AppBarStories from './AppBar.stories';
 # AppBar
 
 <Meta of={AppBarStories} />
+
 <Subtitle>
   provides a navigation bar that contains actions relating to where the user is
   on the application.
@@ -26,31 +27,21 @@ using.
 <Canvas
   of={AppBarStories.Default}
   story={{
-    inline: false,
+    height: '100px',
   }}
 />
 
 <ArgTypes of={AppBarStories} />
 
-# Props
+## Additional variants
 
-## `color`
+### `color`
 
 <Description of={AppBarStories.Default} />
-
 <Canvas
   of={AppBarStories.Default}
   story={{
-    inline: false,
-  }}
-/>
-
-<Description of={AppBarStories.Dark} />
-
-<Canvas
-  of={AppBarStories.Dark}
-  story={{
-    inline: false,
+    height: '100px',
   }}
 />
 
@@ -58,11 +49,11 @@ using.
 <Canvas
   of={AppBarStories.CustomColor}
   story={{
-    inline: false,
+    height: '100px',
   }}
 />
 
-## `position`
+### `position`
 
 `position = 'fixed'`
 

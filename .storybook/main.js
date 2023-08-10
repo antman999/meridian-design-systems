@@ -8,9 +8,12 @@ const config = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    'storybook-dark-mode',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     '@storybook/addon-coverage',
+    '@storybook/addon-mdx-gfm',
+    '@storybook/addon-styling',
   ],
   framework: {
     name: '@storybook/react-vite',

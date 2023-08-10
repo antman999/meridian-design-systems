@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { color, typography } from '../shared/styles';
-
 import { glow } from '../shared/animation';
-
 import { Icon } from '../Icon/Icon';
 
 export const sizes = {
@@ -15,7 +12,8 @@ export const sizes = {
 };
 
 const Image = styled.div`
-  background: ${(props) => (!props.loading ? 'transparent' : color.light)};
+  background: ${(props) =>
+    !props.loading ? 'transparent' : props.theme.color.loadingIcon};
   border-radius: 50%;
   display: inline-block;
   vertical-align: top;
@@ -71,32 +69,38 @@ const Image = styled.div`
   }
 
   path {
-    fill: ${color.medium};
+    fill: ${(props) => props.theme.color.dark};
     animation: ${glow} 1.5s ease-in-out infinite;
   }
 `;
 // prettier-ignore
 const Initial = styled.div`
-  color: ${color.lightest};
+  color: ${(props) => props.theme.color.light1};
   text-align: center;
 
-  font-size: ${typography.size.s2}px;
+  font-size: ${(props) => props.theme.typography.size.s2}px;
   line-height: ${sizes.medium}px;
 
-  ${props => props.size === "tiny" && css`
-    font-size: ${typography.size.s1 - 2}px;
-    line-height: ${sizes.tiny}px;
-  `}
+  ${(props) =>
+    props.size === 'tiny' &&
+    css`
+      font-size: ${(props) => props.theme.typography.size.s1 - 2}px;
+      line-height: ${sizes.tiny}px;
+    `}
 
-  ${props => props.size === "small" && css`
-    font-size: ${typography.size.s1}px;
-    line-height: ${sizes.small}px;
-  `}
+  ${(props) =>
+    props.size === 'small' &&
+    css`
+      font-size: ${(props) => props.theme.typography.size.s1}px;
+      line-height: ${sizes.small}px;
+    `}
 
-  ${props => props.size === "large" && css`
-    font-size: ${typography.size.s3}px;
-    line-height: ${sizes.large}px;
-  `}
+  ${(props) =>
+    props.size === 'large' &&
+    css`
+      font-size: ${(props) => props.theme.typography.size.s3}px;
+      line-height: ${sizes.large}px;
+    `}
 `;
 
 /**

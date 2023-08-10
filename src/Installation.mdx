@@ -4,4 +4,53 @@ import { Meta } from '@storybook/blocks';
 
 # Installation
 
-Install MDS, Guide coming soon.
+To install Meridian in your project, use of the installation methods in your terminal.
+
+**⛔️ This page is still a work in progress as I get closer to version `0.2.0` there will be a detailed guide for different codebases ⛔️**
+
+---
+
+<br />
+<br />
+
+### NPM
+
+```bash
+npm i @antman999/meridian-design-systems
+```
+
+### YARN
+
+```bash
+yarn add @antman999/meridian-design-systems
+```
+
+### PNPN
+
+```bash
+pnpn add @antman999/meridian-design-systems
+```
+
+# Usage
+
+Once installed you can start importing components from meridian into your application!
+
+---
+
+### Example Usage
+
+```jsx live=false
+import { Button } from '@antman999/meridian-design-systems';
+
+function App() {
+  return (
+    <div>
+      <Button appearance='primary' onClick={() => alert('clicked')}>
+        Button
+      </Button>
+    </div>
+  );
+}
+
+export default App;
+```

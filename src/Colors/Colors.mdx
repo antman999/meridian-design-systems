@@ -1,0 +1,89 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { baseColors } from '../shared/styles';
+
+<Meta title='Theming/Colors' />
+
+<ColorPalette>
+  <ColorItem
+    title='theme.color.primary'
+    subtitle='Purple'
+    colors={{ NeonPurple: baseColors.purple.purple200 }}
+  />
+  <ColorItem
+    title='theme.color.secondary'
+    subtitle='Blue'
+    colors={{ ModernBlue: baseColors.blue.blue100 }}
+  />
+  <ColorItem
+    title='theme.color.text'
+    subtitle='Text'
+    colors={{ text: baseColors.white, textInverted: baseColors.black }}
+  />
+  <ColorItem
+    title='theme.color.neutral'
+    subtitle='Some of the greys'
+    colors={{
+      100: baseColors.neutral.neutral100,
+      200: baseColors.neutral.neutral200,
+      300: baseColors.neutral.neutral300,
+      400: baseColors.neutral.neutral400,
+      500: baseColors.neutral.neutral500,
+      600: baseColors.neutral.neutral600,
+      700: baseColors.neutral.neutral700,
+      800: baseColors.neutral.neutral800,
+      900: baseColors.neutral.neutral900,
+    }}
+  />
+  <ColorItem
+    title='theme.color.success'
+    subtitle='Green'
+    colors={{
+      success100: baseColors.green.green100,
+      success200: baseColors.green.green200,
+      success300: baseColors.green.green300,
+    }}
+  />
+  <ColorItem
+    title='theme.color.error'
+    subtitle='Red'
+    colors={{
+      error100: baseColors.red.red100,
+      error200: baseColors.red.red200,
+      error300: baseColors.red.red300,
+    }}
+  />
+  <ColorItem
+    title='theme.color.warning'
+    subtitle='Yellow'
+    colors={{
+      warning100: baseColors.yellow.yellow100,
+      warning200: baseColors.yellow.yellow200,
+      warning300: baseColors.yellow.yellow300,
+    }}
+  />
+  <ColorItem
+    title='theme.color.purple'
+    subtitle='Some of the purples'
+    colors={{
+      100: baseColors.purple.purple100,
+      200: baseColors.purple.purple200,
+      300: baseColors.purple.purple300,
+      400: baseColors.purple.purple400,
+      500: baseColors.purple.purple500,
+      600: baseColors.purple.purple600,
+    }}
+  />
+  <ColorItem
+    title='theme.color.blue'
+    subtitle='Some of the blues'
+    colors={{
+      100: baseColors.blue.blue100,
+      200: baseColors.blue.blue200,
+      300: baseColors.blue.blue300,
+      400: baseColors.blue.blue400,
+      500: baseColors.blue.blue500,
+      600: baseColors.blue.blue600,
+      700: baseColors.blue.blue700,
+    }}
+  />
+</ColorPalette>

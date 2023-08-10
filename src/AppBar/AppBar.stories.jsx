@@ -4,14 +4,13 @@ import { AppBar } from './AppBar';
 import SkeletonPage from '../shared/SkeletonPage';
 import { Link } from '../Link/Link';
 import { Icon } from '../Icon';
-import { background, color, typography } from '../shared/styles';
 
 export default {
   title: 'Navigation/AppBar',
   component: AppBar,
 };
 
-const Children = ({ textColor = 'black' }) => {
+const Children = () => {
   return (
     <div
       style={{
@@ -45,7 +44,7 @@ const Children = ({ textColor = 'black' }) => {
 };
 
 /**
- * The default color is `light` which uses Meridians color token and adds a subtle blur to the AppBar.
+ * `default` adds a subtle blur using light or dark color tokens depending on your color theme.
  */
 export const Default = {
   args: {
@@ -53,21 +52,7 @@ export const Default = {
   },
   render: (args) => (
     <>
-      <AppBar {...args} color='light' />
-    </>
-  ),
-};
-
-/**
- * The `dark` variant uses Meridians dark color token and applies a blur to the AppBar
- */
-export const Dark = {
-  args: {
-    children: <Children />,
-  },
-  render: (args) => (
-    <>
-      <AppBar {...args} color='dark' />
+      <AppBar {...args} />
     </>
   ),
 };
