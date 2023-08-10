@@ -1,3 +1,15 @@
+# v0.1.23 (Thu Aug 10 2023)
+
+#### 🐛 Bug Fix
+
+- 12 housekeeping changes [#14](https://github.com/antman999/meridian-design-systems/pull/14) ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.22 (Thu Aug 03 2023)
 
 #### ⚠️ Pushed to `main`
