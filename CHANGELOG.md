@@ -1,3 +1,15 @@
+# v0.1.24 (Tue Aug 15 2023)
+
+#### 🐛 Bug Fix
+
+- Badge component reworked [#16](https://github.com/antman999/meridian-design-systems/pull/16) ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.23 (Thu Aug 10 2023)
 
 #### 🐛 Bug Fix
