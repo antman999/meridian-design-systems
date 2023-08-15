@@ -1,0 +1,50 @@
+import {
+  Canvas,
+  Controls,
+  ArgTypes,
+  Description,
+  Meta,
+  Subtitle,
+  Story,
+} from '@storybook/blocks';
+
+import * as BadgeStories from './Badge.stories';
+
+# Badge
+
+<Meta of={BadgeStories} />
+
+<Subtitle>
+  A small label that is used to display information about a status,
+  notification, or other metadata.
+</Subtitle>
+
+<Story of={BadgeStories.Default} />
+
+<ArgTypes of={BadgeStories} />
+
+## Badge Usage
+
+### Status
+
+<Description of={BadgeStories.Status} />
+
+<Story of={BadgeStories.Status} />
+
+### Variant
+
+<Description of={BadgeStories.Variant} />
+
+<Story of={BadgeStories.Variant} />
+
+### Rounded
+
+<Description of={BadgeStories.Rounded} />
+
+<Story of={BadgeStories.Rounded} />
+
+## Badge use case
+
+<Description of={BadgeStories.Notification} />
+
+<Story of={BadgeStories.Notification} />
