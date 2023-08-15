@@ -6,72 +6,128 @@ export default {
   component: Badge,
 };
 
-export const AllBadges = {
+export const Default = {
   args: {
-    icon: 'facehappy',
-    inline: true,
+    children: 'Default',
   },
-  name: 'all badges',
-  render: (args) => (
+};
+
+/**
+ * The `status` prop allows you to visually indicate what the badge is for.
+ */
+export const Status = {
+  render: () => (
     <>
-      <Badge status='positive'>Positive</Badge>
-      <Badge status='negative'>Negative</Badge>
+      <Badge status='primary'>Primary</Badge>
+      <Badge status='secondary'>Secondary</Badge>
+      <Badge status='success'>success</Badge>
       <Badge status='neutral'>Neutral</Badge>
       <Badge status='error'>Error</Badge>
       <Badge status='warning'>Warning</Badge>
-      <Badge status='positive'>
-        <Icon {...args} />
-        with icon
-      </Badge>
     </>
   ),
 };
 
-export const Positive = {
-  args: {
-    status: 'positive',
-    children: 'Positive',
-  },
+/**
+ * The `variant` props allows you to customize if the badge should be `default` filled or `outline`.
+ */
+export const Variant = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div>
+        <Badge variant='default'>Default</Badge>
+        <Badge variant='outline'>Outline</Badge>
+      </div>
+      <div>
+        <Badge variant='default' status='secondary'>
+          Default
+        </Badge>
+        <Badge variant='outline' status='secondary'>
+          Outline
+        </Badge>
+      </div>
+      <div>
+        <Badge variant='default' status='success'>
+          Default
+        </Badge>
+        <Badge variant='outline' status='success'>
+          Outline
+        </Badge>
+      </div>
+    </div>
+  ),
 };
 
-export const Negative = {
-  args: {
-    status: 'negative',
-    children: 'Negative',
-  },
-};
-export const Warning = {
-  args: {
-    status: 'warning',
-    children: 'Warning',
-  },
+/**
+ * Adds a `2em` border radius to the badge.
+ */
+export const Rounded = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div>
+        <Badge variant='default' rounded>
+          Default
+        </Badge>
+        <Badge variant='outline' rounded>
+          Outline
+        </Badge>
+      </div>
+      <div>
+        <Badge variant='default' rounded status='error'>
+          Default
+        </Badge>
+        <Badge variant='outline' rounded status='error'>
+          Outline
+        </Badge>
+      </div>
+      <div>
+        <Badge variant='default' rounded status='secondary'>
+          Default
+        </Badge>
+        <Badge variant='outline' rounded status='secondary'>
+          Outline
+        </Badge>
+      </div>
+    </div>
+  ),
 };
 
-export const Neutral = {
-  args: {
-    status: 'neutral',
-    children: 'Neutral',
-  },
-};
+/**
+ * A badge could be used as a notification banner, this will be it's own component in a future release with a counting logic.
+ */
+export const Notification = {
+  name: 'Notification use',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div>
+        <Badge status='secondary'>1</Badge>
+        <Badge status='secondary' rounded>
+          1
+        </Badge>
+        <Badge status='secondary' variant='outline' rounded>
+          1
+        </Badge>
+      </div>
 
-export const Error = {
-  args: {
-    status: 'error',
-    children: 'Error',
-  },
-};
+      <div>
+        <Badge status='neutral'>13</Badge>
+        <Badge status='error' rounded>
+          13
+        </Badge>
+        <Badge status='error' rounded variant='outline'>
+          13
+        </Badge>
+      </div>
 
-export const WithIcon = {
-  args: {
-    status: 'warning',
-    icon: 'check',
-    inline: true,
-  },
-  name: 'with icon',
-  render: (args) => (
-    <Badge {...args}>
-      <Icon {...args} />
-      with icon
-    </Badge>
+      <div>
+        <Badge status='neutral'>99+</Badge>
+        <Badge rounded status='error'>
+          99+
+        </Badge>
+        <Badge rounded variant='outline' status='error'>
+          99+
+        </Badge>
+      </div>
+    </div>
   ),
 };

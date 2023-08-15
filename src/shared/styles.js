@@ -66,7 +66,7 @@ const colors = {
   disabled: baseColors.neutral.neutral300,
   linkColor: baseColors.blue.blue100,
   primary: baseColors.purple.purple200,
-  secondary: baseColors.blue.blue100,
+  secondary: baseColors.blue.blue300,
   success: baseColors.green.green100,
   warning: baseColors.yellow.yellow100,
   error: baseColors.red.red100,
