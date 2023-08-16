@@ -1,3 +1,15 @@
+# v0.1.25 (Wed Aug 16 2023)
+
+#### 🐛 Bug Fix
+
+- ReadMe changes done [#18](https://github.com/antman999/meridian-design-systems/pull/18) ([@antman999](https://github.com/antman999))
+
+#### Authors: 1
+
+- Anthony Mendoza ([@antman999](https://github.com/antman999))
+
+---
+
 # v0.1.24 (Tue Aug 15 2023)
 
 #### 🐛 Bug Fix
